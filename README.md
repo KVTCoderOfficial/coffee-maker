@@ -1,2 +1,2 @@
 # coffee-maker
-Program for the operation of a coffee maker and controlled through a browse.
+Program for the operation of a coffee maker and controlled through browser.
