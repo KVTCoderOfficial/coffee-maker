@@ -9,7 +9,6 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
-
 @ApiModel(description = "Data transfer object for coffee strength, representing coffee strength")
 @Data
 @NoArgsConstructor
@@ -19,6 +18,6 @@ public class CoffeeStrengthDto {
     @Min(0)
     @Max(100)
     @NotNull
-    private int coffeeStrength;
+    private Integer coffeeStrength;
 
 }

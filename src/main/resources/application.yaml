@@ -1,7 +1,7 @@
 server:
   port: 8189
   servlet:
-    context-path: /kvt
+    context-path: /coffee-maker-manager
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver

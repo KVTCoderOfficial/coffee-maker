@@ -8,7 +8,6 @@ import ru.kvt.coffeemaker.model.BoilingMode;
 
 import javax.validation.constraints.NotNull;
 
-
 @ApiModel(description = "Data transfer object for boiling mode, representing boiling mode")
 @Data
 @NoArgsConstructor

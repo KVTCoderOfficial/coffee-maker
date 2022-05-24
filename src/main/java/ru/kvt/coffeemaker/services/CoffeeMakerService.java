@@ -1,6 +1,5 @@
 package ru.kvt.coffeemaker.services;
 
-
 import ru.kvt.coffeemaker.model.BoilingMode;
 import ru.kvt.coffeemaker.model.CoffeeMakerState;
 

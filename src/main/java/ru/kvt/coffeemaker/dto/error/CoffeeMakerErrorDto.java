@@ -6,7 +6,6 @@ import lombok.Data;
 
 import java.util.Date;
 
-
 @ApiModel(description = "Error, sent to client, when something goes wrong")
 @Data
 public class CoffeeMakerErrorDto {
@@ -15,7 +14,7 @@ public class CoffeeMakerErrorDto {
     private Date timestamp;
 
     @ApiModelProperty(notes = "Number of HTTP status response", example = "400", required = true, position = 1)
-    private int status;
+    private Integer status;
 
     @ApiModelProperty(notes = "Reason phrase of HTTP status response", example = "Bad Request", required = true, position = 2)
     private String error;
@@ -23,7 +22,7 @@ public class CoffeeMakerErrorDto {
     @ApiModelProperty(notes = "Message with reason of error for client", example = "Неверные параметры запроса", required = true, position = 3)
     private String message;
 
-    public CoffeeMakerErrorDto(int status, String error, String message) {
+    public CoffeeMakerErrorDto(Integer status, String error, String message) {
         this.timestamp = new Date();
         this.status = status;
         this.error = error;

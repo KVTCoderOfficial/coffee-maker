@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import ru.kvt.coffeemaker.model.Event;
 import ru.kvt.coffeemaker.repositories.EventRepository;
 
-
 @Service
 @RequiredArgsConstructor
 public class EventServiceImpl implements EventService {

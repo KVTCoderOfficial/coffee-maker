@@ -2,7 +2,6 @@ package ru.kvt.coffeemaker.dto.error;
 
 import lombok.Getter;
 
-
 @Getter
 public enum CoffeeMakerErrorMessage {
 
@@ -11,7 +10,8 @@ public enum CoffeeMakerErrorMessage {
     COFFEE_MAKER_STATE_NOT_FOUND("Установите начальное состояние кофеварки"),
     CURRENT_BOILING_MODE_ALREADY_SELECTED("Данный режим уже включен"),
     COFFEE_MAKER_ALREADY_DISABLED("Кофеварка уже выключена"),
-    COFFEE_MAKER_ALREADY_ENABLED("Кофеварка уже включена");
+    COFFEE_MAKER_ALREADY_ENABLED("Кофеварка уже включена"),
+    UNEXPECTED_ERROR("Неизвестная ошибка");
 
     private final String message;
 

@@ -1,6 +1,5 @@
 package ru.kvt.coffeemaker.services;
 
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -8,7 +7,6 @@ import ru.kvt.coffeemaker.exceptions.*;
 import ru.kvt.coffeemaker.model.BoilingMode;
 import ru.kvt.coffeemaker.model.CoffeeMakerState;
 import ru.kvt.coffeemaker.model.Event;
-
 
 @Service
 @RequiredArgsConstructor

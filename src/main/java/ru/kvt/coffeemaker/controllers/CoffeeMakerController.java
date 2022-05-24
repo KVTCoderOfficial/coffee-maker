@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.*;
 import ru.kvt.coffeemaker.dto.BoilingModeDto;
 import ru.kvt.coffeemaker.dto.CoffeeMakerStateDto;
 import ru.kvt.coffeemaker.dto.CoffeeStrengthDto;
+import ru.kvt.coffeemaker.dto.error.CoffeeMakerErrorDto;
 import ru.kvt.coffeemaker.mappers.CoffeeMakerStateMapper;
 import ru.kvt.coffeemaker.model.BoilingMode;
 import ru.kvt.coffeemaker.model.CoffeeMakerState;
 import ru.kvt.coffeemaker.services.CoffeeMakerService;
 
 import javax.validation.Valid;
-
 
 @Api(value = "Set of endpoints for coffee-maker", produces = "application/json", consumes = "application/json", protocols = "http")
 @RestController
@@ -27,9 +27,8 @@ public class CoffeeMakerController {
 
     @ApiOperation("Turns on coffee-maker")
     @ApiResponses({
-            @ApiResponse(code = 200, message = "OK"),
-            @ApiResponse(code = 401, message = "Unauthorized"),
-            @ApiResponse(code = 403, message = "Forbidden"),
+            @ApiResponse(code = 200, message = "Coffee-maker Is Enabled"),
+            @ApiResponse(code = 400, message = "Bad Request", response = CoffeeMakerErrorDto.class),
             @ApiResponse(code = 500, message = "Server Error")
     })
     @PostMapping("/enable")
@@ -39,9 +38,8 @@ public class CoffeeMakerController {
 
     @ApiOperation("Turns off coffee-maker")
     @ApiResponses({
-            @ApiResponse(code = 200, message = "OK"),
-            @ApiResponse(code = 401, message = "Unauthorized"),
-            @ApiResponse(code = 403, message = "Forbidden"),
+            @ApiResponse(code = 200, message = "Coffee-maker Is Disabled"),
+            @ApiResponse(code = 400, message = "Bad Request", response = CoffeeMakerErrorDto.class),
             @ApiResponse(code = 500, message = "Server Error")
     })
     @PostMapping("/disable")
@@ -51,9 +49,8 @@ public class CoffeeMakerController {
 
     @ApiOperation("Pours coffee")
     @ApiResponses({
-            @ApiResponse(code = 200, message = "OK"),
-            @ApiResponse(code = 401, message = "Unauthorized"),
-            @ApiResponse(code = 403, message = "Forbidden"),
+            @ApiResponse(code = 200, message = "Coffee Poured"),
+            @ApiResponse(code = 400, message = "Bad Request", response = CoffeeMakerErrorDto.class),
             @ApiResponse(code = 500, message = "Server Error")
     })
     @PostMapping("/pour-coffee")
@@ -63,11 +60,8 @@ public class CoffeeMakerController {
 
     @ApiOperation("Sets coffee strength")
     @ApiResponses({
-            @ApiResponse(code = 200, message = "OK"),
-            @ApiResponse(code = 201, message = "Coffee Strength Set"),
-            @ApiResponse(code = 400, message = "Bad Request"),
-            @ApiResponse(code = 401, message = "Unauthorized"),
-            @ApiResponse(code = 403, message = "Forbidden"),
+            @ApiResponse(code = 200, message = "Coffee Strength Set", response = CoffeeStrengthDto.class),
+            @ApiResponse(code = 400, message = "Bad Request", response = CoffeeMakerErrorDto.class),
             @ApiResponse(code = 404, message = "Option Not Found"),
             @ApiResponse(code = 500, message = "Server Error")
     })
@@ -81,9 +75,8 @@ public class CoffeeMakerController {
 
     @ApiOperation("Pours water or vapor")
     @ApiResponses({
-            @ApiResponse(code = 200, message = "OK"),
-            @ApiResponse(code = 401, message = "Unauthorized"),
-            @ApiResponse(code = 403, message = "Forbidden"),
+            @ApiResponse(code = 200, message = "Boiling Water Poured"),
+            @ApiResponse(code = 400, message = "Bad Request", response = CoffeeMakerErrorDto.class),
             @ApiResponse(code = 500, message = "Server Error")
     })
     @PostMapping("/boiling")
@@ -93,11 +86,8 @@ public class CoffeeMakerController {
 
     @ApiOperation("Sets boiling mode")
     @ApiResponses({
-            @ApiResponse(code = 200, message = "OK"),
-            @ApiResponse(code = 201, message = "Boiling Mode Set"),
-            @ApiResponse(code = 400, message = "Bad Request"),
-            @ApiResponse(code = 401, message = "Unauthorized"),
-            @ApiResponse(code = 403, message = "Forbidden"),
+            @ApiResponse(code = 200, message = "Boiling Mode Set", response = BoilingModeDto.class),
+            @ApiResponse(code = 400, message = "Bad Request", response = CoffeeMakerErrorDto.class),
             @ApiResponse(code = 404, message = "Option Not Found"),
             @ApiResponse(code = 500, message = "Server Error")
     })
@@ -111,9 +101,8 @@ public class CoffeeMakerController {
 
     @ApiOperation("Returns state of coffee-maker")
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Coffee-makers State Found"),
-            @ApiResponse(code = 401, message = "Unauthorized"),
-            @ApiResponse(code = 403, message = "Forbidden"),
+            @ApiResponse(code = 200, message = "Coffee-makers State Found", response = CoffeeMakerStateDto.class),
+            @ApiResponse(code = 400, message = "Bad Request", response = CoffeeMakerErrorDto.class),
             @ApiResponse(code = 404, message = "Coffee-maker Defected"),
             @ApiResponse(code = 500, message = "Server Error")
     })
