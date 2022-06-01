@@ -8,9 +8,9 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
-import ru.kvt.coffeemaker.dto.error.CoffeeMakerErrorMessage;
+import ru.kvt.coffeemaker.dto.errors.CoffeeMakerErrorMessage;
 import ru.kvt.coffeemaker.exceptions.*;
-import ru.kvt.coffeemaker.dto.error.CoffeeMakerErrorDto;
+import ru.kvt.coffeemaker.dto.errors.CoffeeMakerErrorDto;
 
 @ControllerAdvice
 @Slf4j
