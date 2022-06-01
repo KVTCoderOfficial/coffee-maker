@@ -14,4 +14,4 @@ The program for the operation of a coffee-maker and controlled through a browser
 (Пример: java -jar -DDB_URL=jdbc:postgresql://localhost:5432/postgres?currentSchema=coffeemaker -DDB_USERNAME=postgres -DDB_PASSWORD=postgres coffee-maker-0.0.1-SNAPSHOT.jar).
 
 
-Для захода на SWAGGER-UI перейдите в браузере по адресу http://localhost:8189/coffee-maker-manager/swagger-ui/index.html
+Для использования SWAGGER-UI перейдите в браузере по адресу http://localhost:8189/coffee-maker-manager/swagger-ui/index.html
