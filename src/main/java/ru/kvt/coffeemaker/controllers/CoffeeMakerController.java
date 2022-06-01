@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.kvt.coffeemaker.dto.BoilingModeDto;
 import ru.kvt.coffeemaker.dto.CoffeeMakerStateDto;
 import ru.kvt.coffeemaker.dto.CoffeeStrengthDto;
-import ru.kvt.coffeemaker.dto.error.CoffeeMakerErrorDto;
+import ru.kvt.coffeemaker.dto.errors.CoffeeMakerErrorDto;
 import ru.kvt.coffeemaker.mappers.CoffeeMakerStateMapper;
 import ru.kvt.coffeemaker.model.BoilingMode;
 import ru.kvt.coffeemaker.model.CoffeeMakerState;
