@@ -1,4 +1,4 @@
-package ru.kvt.coffeemaker.dto.error;
+package ru.kvt.coffeemaker.dto.errors;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
