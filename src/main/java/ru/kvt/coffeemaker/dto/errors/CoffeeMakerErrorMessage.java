@@ -1,4 +1,4 @@
-package ru.kvt.coffeemaker.dto.error;
+package ru.kvt.coffeemaker.dto.errors;
 
 import lombok.Getter;
 
